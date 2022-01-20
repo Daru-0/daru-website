@@ -5,27 +5,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Matteo Danelon">
         <meta name="description" content="A simple welcome page">
-        <title>Daru welcomes you</title>
+        <title>Matteo Danelon</title>
         <link rel="stylesheet" href="./style.css">
-        <link rel="shortcut icon" href="./images/icon-admin-blu.ico"
+        <link rel="shortcut icon" href="./images/favicon.png">
     </head>
     <body>
-        <div class="mainBox">
-            <div class="mainTitle">
-                $ Daru says...
+        <section class="banner" id="sec">
+            <header>
+                <a href="#" class="logo">logo</a>
+                <div id="toggle" onclick="toggle()"></div>
+            </header>
+            <div class="content">
+                <h2>Ciao mondo,<br>sono <span>Matteo Danelon</span></h2>
+                <p>Appassionato di informatica sin dall'adolescenza, ho assemblato il mio primo computer a 17 anni. Ora, applicando conoscenze acquisite durante i gli studi e nel mio tempo libero, ho progettato e gestisco un piccolo homelab personale, che utilizzo per testare il mio codice e per apprendere nuove tecnologie.</p>
+                <p>Grazie anche alla passione per i LEGO che nutro fin da bambino, sono sempre stato molto desideroso di conoscere il funzionamento pratico delle cose. Mi piace capire a fondo come qualcosa viene costruito o il modo in cui lavora.</p>
+                <p>La mia non eccessiva creatività artistica è compensata da una grande curiosità, che mi permette di apprendere in fretta e stare al passo con tutte le novità nei miei campi di interesse.</p>
+                <p>Mi puoi facilmente trovare in una libreria nella sezione avventure, a qualche convection di comics, in mezzo a qualche bosco od ovviamente davanti al mio computer. Altrimenti puoi sempre raggiungermi tramite i social network.</p>
+                <a href="#" target="_blank">Esplora</a>
             </div>
-            <div class="subTitle">
-                Hello!
-            </div>
-            <div class="social">
-                <ul>
-                    <li class="linkList">&nbsp;Linkedin</li>
-                    <li class="linkList">&nbsp;E-mail</li>
-                    <li class="linkList">&nbsp;GitHub</li>
-                    <li class="linkList">&nbsp;GitLab</li>
-                    <li class="linkList">&nbsp;DockerHub</li>
-                </ul>
-            </div>
+            <ul class="sci">
+                <li><a href="mailto:matteo@danelon.me" target="_blank" title="Email"><img src="./images/mail.png"></a></li>
+                <li><a href="https://www.linkedin.com/in/matteo-danelon/" target="_blank" title="Linkedin"><img src="./images/linkedin.png"></a></li>
+                <li><a href="https://github.com/Daru-0" target="_blank" title="GitHub"><img src="./images/github.png"></a></li>
+                <li><a href="https://gitlab.com/DaruZero" target="_blank" title="GitLab"><img src="./images/gitlab.png"></a></li>
+                <!-- <li><a href="#" target="_blank" title="Twitter"><img src="./images/twitter.png"></a></li>
+                <li><a href="#" target="_blank" title="Facebook"><img src="./images/facebook-circle-line.png"></a></li>
+                <li><a href="#" target="_blank" title="Instagram"><img src="./images/instagram-line.png"></a></li>
+                <li><a href="#" target="_blank" title="Messenger"><img src="./images/messenger-line.png"></a></li>
+                <li><a href="#" target="_blank" title="Discord"><img src="./images/discord-line.png"></a></li>
+                <li><a href="#" target="_blank" title="Skype"><img src="./images/skype-line.png"></a></li>
+                <li><a href="#" target="_blank" title="Telegram"><img src="./images/telegram-line.png"></a></li>
+                <li><a href="#" target="_blank" title="WhatsApp"><img src="./images/whatsapp-line.png"></a></li> -->
+            </ul>
+        </section>
+        <div id="navigation">
+            <ul>
+                <li><a href="#" title="Il mio blog personale">Blog</a></li>
+                <li><a href="#" title="Il mio fantastico portfolio">Portfolio</a></li>
+                <li><a href="#" title="I miei contatti">Contatti</a></li>
+            </ul>
         </div>
+        <script type="text/javascript">
+            function toggle(){
+                var sec = document.getElementById('sec')
+                var nav = document.getElementById('navigation')
+                sec.classList.toggle('active')
+                nav.classList.toggle('active')
+            }
+        </script>
     </body>
 </html>
