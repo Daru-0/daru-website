@@ -3,16 +3,12 @@ version: '3.0'
 services:
   website:
     build: ./
+    image: daru-website:latest
     container_name: daru-website
-    healthcheck:
-      test: ["CMD", "curl", "--fail", "https://danelon.me"]
-      interval: 1m30s
-      timeout: 10s
-      retries: 3
     networks:
       - nginx-proxy-manager_default
     ports:
-      - "88:80"
+      - 88:80
     restart: unless-stopped
     volumes:
       - ./src:/usr/share/nginx/html
